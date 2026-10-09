@@ -63,6 +63,27 @@
         .glow-btn:hover {
             box-shadow: 0 12px 35px rgba(37, 99, 235, 0.65);
         }
+        /* Mobile Device Mockup Frame */
+        .phone-mockup {
+            border: 8px solid #0f172a;
+            border-radius: 40px;
+            box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.1);
+            background: #020617;
+            position: relative;
+            overflow: hidden;
+        }
+        .phone-notch {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 18px;
+            width: 110px;
+            background: #0f172a;
+            border-bottom-left-radius: 14px;
+            border-bottom-right-radius: 14px;
+            z-index: 20;
+        }
     </style>
 </head>
 <body class="text-slate-800 antialiased selection:bg-brand-500 selection:text-white">
@@ -73,8 +94,8 @@
             <!-- Brand Logo -->
             <a href="#" class="flex items-center gap-3 group">
                 <div class="w-12 h-12 rounded-2xl overflow-hidden shadow-md shadow-brand-500/20 group-hover:scale-105 transition-transform flex items-center justify-center bg-blue-600">
-                    <!-- User Logo Image -->
-                    <img src="logo.png" alt="SaroNet Logo" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/100x100/1d4ed8/ffffff?text=SaroNet'">
+                    <!-- User Logo Image from assets -->
+                    <img src="assets/logo.png" alt="SaroNet Logo" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/100x100/1d4ed8/ffffff?text=SaroNet'">
                 </div>
                 <div class="flex flex-col">
                     <span class="text-2xl font-black text-brand-700 tracking-tight">سارونت</span>
@@ -85,6 +106,7 @@
             <!-- Quick Links -->
             <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
                 <a href="#features" class="hover:text-brand-600 transition-colors">ویژگی‌های برنامه</a>
+                <a href="#screens" class="hover:text-brand-600 transition-colors">محیط برنامه</a>
                 <a href="#download" class="hover:text-brand-600 transition-colors">دانلود نسخه جدید</a>
                 <a href="#guide" class="hover:text-brand-600 transition-colors">راهنمای نصب</a>
                 <a href="#faq" class="hover:text-brand-600 transition-colors">پرسش‌های متداول</a>
@@ -184,7 +206,7 @@
 
                 </div>
 
-                <!-- Hero Visual / Feature Showcase Card (No Screenshots) -->
+                <!-- Hero Visual / Feature Showcase Card -->
                 <div class="lg:col-span-5 flex justify-center">
                     <div class="w-full max-w-sm space-y-4">
                         <!-- Main Card -->
@@ -192,8 +214,8 @@
                             <div class="flex items-center justify-between border-b border-white/15 pb-4 mb-5">
                                 <div class="flex items-center gap-3">
                                     <div class="w-12 h-12 rounded-2xl overflow-hidden shadow-md flex items-center justify-center bg-white/10 border border-white/20">
-                                        <!-- User Logo Image -->
-                                        <img src="logo.png" alt="SaroNet" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/100x100/1d4ed8/ffffff?text=SaroNet'">
+                                        <!-- User Logo Image from assets -->
+                                        <img src="assets/logo.png" alt="SaroNet" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/100x100/1d4ed8/ffffff?text=SaroNet'">
                                     </div>
                                     <div>
                                         <h3 class="font-black text-lg">سارونت (SaroNet)</h3>
@@ -329,6 +351,78 @@
                     </div>
                     <h3 class="text-xl font-bold text-slate-900 mb-3">سبک و بهینه برای اندروید ۷+</h3>
                     <p class="text-slate-600 text-sm leading-relaxed">کدنویسی بهینه‌سازی شده بدون اشغال منابع، سازگار با انواع گوشی‌ها و تبلت‌های دارای اندروید ۷ به بالا.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- App Screenshots / Preview Section -->
+    <section id="screens" class="py-20 bg-slate-50 border-y border-slate-200/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="text-brand-600 font-extrabold text-sm tracking-widest uppercase">رابط کاربری پیشرفته</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">محیط کاربری ساده، تاریک و مدرن</h2>
+                <p class="text-slate-500 text-sm sm:text-base">طراحی استاندارد، اتصال سریع تک‌لمسی، انتخاب آسان سرورها و امکان جداسازی ترافیک برنامه‌ها (Split Tunneling)</p>
+            </div>
+
+            <!-- Horizontal Scroll / Responsive Grid for Mockup Phones -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center">
+                
+                <!-- Mockup 1: Connected Screen -->
+                <div class="flex flex-col items-center space-y-4 max-w-[280px] w-full">
+                    <div class="phone-mockup w-full aspect-[9/19] relative group">
+                        <div class="phone-notch"></div>
+                        <img src="assets/screen_connected.png" alt="SaroNet Connected Screen" 
+                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                             onerror="this.src='https://placehold.co/400x850/0b1329/ffffff?text=Connected+Screen'">
+                    </div>
+                    <div class="text-center">
+                        <h4 class="font-bold text-slate-800 text-sm">اتصال پایدار و پرسرعت</h4>
+                        <p class="text-xs text-slate-500 mt-0.5">نمایش ترافیک مصرفی و وضعیت اتصال</p>
+                    </div>
+                </div>
+
+                <!-- Mockup 2: Server List -->
+                <div class="flex flex-col items-center space-y-4 max-w-[280px] w-full">
+                    <div class="phone-mockup w-full aspect-[9/19] relative group">
+                        <div class="phone-notch"></div>
+                        <img src="assets/screen_servers.png" alt="SaroNet Servers List" 
+                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                             onerror="this.src='https://placehold.co/400x850/0b1329/ffffff?text=Servers+List'">
+                    </div>
+                    <div class="text-center">
+                        <h4 class="font-bold text-slate-800 text-sm">سرورهای اختصاصی و بهینه</h4>
+                        <p class="text-xs text-slate-500 mt-0.5">پینگ پایین از معتبرترین کشورهای اروپایی</p>
+                    </div>
+                </div>
+
+                <!-- Mockup 3: Login Screen -->
+                <div class="flex flex-col items-center space-y-4 max-w-[280px] w-full">
+                    <div class="phone-mockup w-full aspect-[9/19] relative group">
+                        <div class="phone-notch"></div>
+                        <img src="assets/screen_login.png" alt="SaroNet Login Screen" 
+                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                             onerror="this.src='https://placehold.co/400x850/0b1329/ffffff?text=Login+Screen'">
+                    </div>
+                    <div class="text-center">
+                        <h4 class="font-bold text-slate-800 text-sm">ورود با نام کاربری و رمز</h4>
+                        <p class="text-xs text-slate-500 mt-0.5">پشتیبانی از اسکن QR Code و ذخیره اکانت</p>
+                    </div>
+                </div>
+
+                <!-- Mockup 4: Split Tunneling & Settings -->
+                <div class="flex flex-col items-center space-y-4 max-w-[280px] w-full">
+                    <div class="phone-mockup w-full aspect-[9/19] relative group">
+                        <div class="phone-notch"></div>
+                        <img src="assets/screen_settings.png" alt="SaroNet Settings and Split Tunneling" 
+                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                             onerror="this.src='https://placehold.co/400x850/0b1329/ffffff?text=Split+Tunneling'">
+                    </div>
+                    <div class="text-center">
+                        <h4 class="font-bold text-slate-800 text-sm">جداسازی برنامه‌های داخلی (Tunnel)</h4>
+                        <p class="text-xs text-slate-500 mt-0.5">عبور بدون فیلترشکن برای اپلیکیشن‌های بانکی</p>
+                    </div>
                 </div>
 
             </div>
