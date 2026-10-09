@@ -1,427 +1,554 @@
-<!doctype html>
-<html class="no-js" lang="en">
-
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" class="scroll-smooth">
 <head>
-    <meta charset="utf-8">
-    <!--Site Title-->
-    <title>سارونت | SaroNet</title>
-    <!--Meta data-->
-    <meta name="description" content="Saronet VPN یک سرویس پیشرفته و اشتراکی برای دسترسی بدون محدودیت به اینترنت است. این فیلترشکن با استفاده از پروتکل‌های رمزنگاری قدرتمند، امنیت داده‌های شما را تضمین می‌کند و تجربه‌ای سریع و پایدار را در اختیار کاربران قرار می‌دهد.
-
-">
-	<meta name="keywords" content="اپلیکیشن سارونت, دانلود برنامه ی سارونت, نصب اپلیکیشن سارونت, سارونت, دانلود سارونت, فیلتر شکن, گذر از تحریم, قندشکن, فیلترشکن اختصاصی, فیلترشکن اندروید">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta property="og:title" content="">
-    <meta property="og:type" content="">
-    <meta property="og:url" content="">
-    <meta property="og:image" content="">
-
-    <!--Favicon-->
-    <link rel="manifest" href="assets/images/favicon.ico">
-    <link rel="apple-touch-icon" href="assets/images/icon.png">
-    <!-- Place favicon.ico in the root directory -->
-
-    <link href="assets/images/favicon.ico" rel="icon" sizes="32x32">
-    <link href="assets/images/favicon.ico" rel="icon" sizes="192x192">
-
-    <!-- IOS Touch Icons -->
-    <link rel="apple-touch-icon" href="assets/images/favicon.ico">
-    <link rel="apple-touch-icon" sizes="152x152" href="assets/images/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon.ico">
-    <link rel="apple-touch-icon" sizes="167x167" href="assets/images/favicon.ico">
-
-    <!-- IOS Touch Icons -->
-    <link rel="apple-touch-icon" href="assets/images/favicon.ico">
-    <link rel="apple-touch-icon" sizes="152x152" href="assets/images/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon.ico">
-    <link rel="apple-touch-icon" sizes="167x167" href="assets/images/favicon.ico">
-
-
-    <!--FontAwesome CSS-->
-    <link rel="stylesheet" href="assets/css/font-awesome.css">
-
-    <!-- owl carousel -->
-    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-
-    <!--Bootstrap CSS-->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-
-    <!--Theme Main CSS [ Style.css ]-->
-    <link rel="stylesheet" href="assets/css/style.css">
-
-    <meta name="theme-color" content="#fafafa">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دانلود فیلترشکن سارونت | SaroNet v2.1.1</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Vazirmatn -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            200: '#bfdbfe',
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#1d4ed8',
+                            700: '#1e40af',
+                            800: '#1e3a8a',
+                            900: '#172554'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Vazirmatn', 'system-ui', 'sans-serif'],
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 4s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Vazirmatn', system-ui, sans-serif;
+            background-color: #f8fafc;
+        }
+        .hero-pattern {
+            background-color: #ffffff;
+            background-image: radial-gradient(#dbeafe 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        .glow-blue {
+            box-shadow: 0 10px 30px -5px rgba(29, 78, 216, 0.35);
+        }
+        .glow-btn {
+            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.45);
+        }
+        .glow-btn:hover {
+            box-shadow: 0 12px 35px rgba(37, 99, 235, 0.65);
+        }
+    </style>
 </head>
+<body class="text-slate-800 antialiased selection:bg-brand-500 selection:text-white">
 
-<!-- preloder stard -->
-<div class="preloder">
-    <span></span>
-</div>
-<!-- preloder end -->
-
-<body>
-    <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-md fixed-top">
-        <div class="container">
-            <!-- Brand -->
-            <a class="navbar-brand" href="index.html" style="align-content: center;align-items: center;display: flex;">
-            <img src="assets/images/logo.png" alt="icon" style="width: 45px;border-radius: 3px;margin-left: 20px;">
-                SaroNet
+    <!-- Navigation Bar -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-white/90 border-b border-slate-100 transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-12 h-12 rounded-2xl overflow-hidden shadow-md shadow-brand-500/20 group-hover:scale-105 transition-transform flex items-center justify-center bg-blue-600">
+                    <!-- User Logo Image -->
+                    <img src="logo.png" alt="SaroNet Logo" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/100x100/1d4ed8/ffffff?text=SaroNet'">
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-2xl font-black text-brand-700 tracking-tight">سارونت</span>
+                    <span class="text-xs font-semibold text-slate-400 tracking-wider">SARONET VPN</span>
+                </div>
             </a>
 
-            <!-- Toggler/collapsibe Button -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-                <i class="fas fa-bars"></i>
-            </button>
-            <!-- Navbar links -->
-            <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" data-scroll-nav="0" href="#">خانه</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-scroll-nav="1" href="#">ویژگی ها</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-scroll-nav="2" href="#">تصاویر</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-scroll-nav="6" href="#">تماس با ما</a>
-                    </li>
-                </ul>
+            <!-- Quick Links -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
+                <a href="#features" class="hover:text-brand-600 transition-colors">ویژگی‌های برنامه</a>
+                <a href="#download" class="hover:text-brand-600 transition-colors">دانلود نسخه جدید</a>
+                <a href="#guide" class="hover:text-brand-600 transition-colors">راهنمای نصب</a>
+                <a href="#faq" class="hover:text-brand-600 transition-colors">پرسش‌های متداول</a>
+            </nav>
+
+            <!-- Navbar Download Button -->
+            <div class="flex items-center gap-3">
+                <a href="https://github.com/saronetapp/SaroNet/releases/download/2.1.1/SaroNet_2.1.1.apk" 
+                   class="inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white font-bold px-5 py-2.5 rounded-xl shadow-md shadow-brand-500/25 transition-all transform hover:-translate-y-0.5 active:translate-y-0 text-sm">
+                    <svg class="w-4 h-4 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                    </svg>
+                    <span>دانلود مستقیم</span>
+                    <span class="hidden sm:inline-block bg-brand-500/80 px-2 py-0.5 rounded text-[11px]">v2.1.1</span>
+                </a>
             </div>
         </div>
-    </nav>
-    <!-- Navbar End -->
+    </header>
 
-    <!-- Home section Stard -->
-    <section class="home d-flex align-items-center" id="Home" data-scroll-index="0">
-        <div class="effect-wrap">
-            <i class="fas fa-plus effect effect-1"></i>
-            <i class="fas fa-plus effect effect-2"></i>
-            <i class="fas fa-circle-notch effect effect-3"></i>
-        </div>
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-7">
-                    <div class="home-text">
-                        <h1>SaroNet</h1>
-                        <p style="font-weight: 500">راهکاری مطمئن برای عبور از محدودیت‌ها و حفظ حریم خصوصی شما!</p>
-                        <p style="margin-top: 5px">Saronet VPN یک سرویس پیشرفته و اشتراکی برای دسترسی بدون محدودیت به اینترنت است. این فیلترشکن با استفاده از پروتکل‌های رمزنگاری قدرتمند، امنیت داده‌های شما را تضمین می‌کند و تجربه‌ای سریع و پایدار را در اختیار کاربران قرار می‌دهد.</p>
-                        <div class="home-btn">
-                            <a href="https://github.com/saronetapp/SaroNet/releases/download/2.1.1/SaroNet_2.1.1.apk" class="btn btn-1" style="margin-top: 10px;margin-right: 10px;"><i class="fa fa-download"></i> &nbsp;دانلود آخرین نسخه </a>
-                            <a href="https://t.me/SaroNet" class="btn btn-1" style="margin-top: 10px;margin-right: 10px;"><i class="fab fa-telegram"></i> &nbsp;دانلود از کانال تلگرام</a>
-                            <!--<button type="button" class="btn btn-1 video-play-btn">
-                                <i class="fas fa-play"></i>
-                                &nbsp;ویدئو معرفی
-                            </button>-->
+    <!-- Hero Section -->
+    <section class="relative hero-pattern pt-12 pb-20 overflow-hidden border-b border-slate-100">
+        <!-- Background Lighting Gradient Blobs -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] bg-brand-200/40 rounded-full blur-3xl pointer-events-none -z-10"></div>
+        <div class="absolute -top-10 right-10 w-72 h-72 bg-blue-100/60 rounded-full blur-2xl pointer-events-none -z-10"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Hero Content (Text & Call to actions) -->
+                <div class="lg:col-span-7 text-center lg:text-right space-y-7">
+                    <!-- Version Badge -->
+                    <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-brand-50 border border-brand-200 text-brand-700 text-xs sm:text-sm font-semibold shadow-sm">
+                        <span class="flex h-2.5 w-2.5 relative">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-brand-600"></span>
+                        </span>
+                        <span>نسخه رسمی ۲.۱.۱ هم‌اکنون در دسترس است</span>
+                    </div>
+
+                    <!-- Main Catchy Title -->
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 leading-[1.25]">
+                        اینترنت آزاد، پرسرعت <br class="hidden sm:inline">
+                        و پایدار با <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-blue-500">سارونت (SaroNet)</span>
+                    </h1>
+
+                    <!-- Subtitle -->
+                    <p class="text-slate-600 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                        سرویس اشتراکی با حجم کاملاً نامحدود، اتصال پایدار با نام کاربری و رمز عبور اختصاصی و پشتیبانی کامل و تضمینی از تمامی سرویس‌های هوش مصنوعی بین‌المللی بدون قطعی.
+                    </p>
+
+                    <!-- Prominent High-Visibility Download Section -->
+                    <div class="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center justify-center lg:justify-start gap-4">
+                        
+                        <!-- Main APK Button -->
+                        <a id="hero-download-btn" href="https://github.com/saronetapp/SaroNet/releases/download/2.1.1/SaroNet_2.1.1.apk" 
+                           class="glow-btn group relative flex items-center justify-between sm:justify-start gap-4 bg-gradient-to-r from-brand-600 to-blue-600 hover:from-brand-700 hover:to-blue-700 text-white font-extrabold px-8 py-4 rounded-2xl transition-all transform hover:-translate-y-1 active:translate-y-0.5 border border-brand-400/30">
+                            <div class="p-2.5 bg-white/20 rounded-xl group-hover:scale-110 transition-transform flex items-center justify-center">
+                                <!-- Android APK Icon -->
+                                <svg class="w-7 h-7 text-white fill-current" viewBox="0 0 24 24">
+                                    <path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-1.0002 0-.5516.4482-1.0002.9993-1.0002.5516 0 .9997.4486.9997 1.0002 0 .5516-.4481 1.0002-.9997 1.0002m-11.046 0c-.5511 0-.9993-.4486-.9993-1.0002 0-.5516.4482-1.0002.9993-1.0002.5516 0 .9997.4486.9997 1.0002 0 .5516-.4481 1.0002-.9997 1.0002m11.4045-6.02l1.996-3.4565c.1011-.1756.0409-.4013-.1347-.5024-.1756-.1011-.4013-.0409-.5024.1347l-2.0232 3.5042c-1.4057-.6438-2.981-.9988-4.7172-.9988-1.7362 0-3.3115.355-4.7172.9988l-2.0232-3.5042c-.1011-.1756-.3268-.2358-.5024-.1347-.1756.1011-.2358.3268-.1347.5024l1.996 3.4565c-3.1362 1.705-5.263 4.887-5.263 8.6586h21.1858c0-3.7716-2.1268-6.9536-5.263-8.6586"/>
+                                </svg>
+                            </div>
+                            <div class="text-right flex-1">
+                                <div class="text-xs text-blue-100 font-medium">دانلود مستقیم فایل اندروید (APK)</div>
+                                <div class="text-lg font-black tracking-wide">دریافت نسخه ۲.۱.۱</div>
+                            </div>
+                            <svg class="w-5 h-5 text-blue-200 group-hover:translate-x-[-4px] transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/>
+                            </svg>
+                        </a>
+
+                        <!-- Copy Link Button -->
+                        <button onclick="copyDownloadLink()" 
+                                class="flex items-center justify-center gap-2 bg-white hover:bg-slate-50 text-slate-700 hover:text-brand-600 font-bold px-6 py-4 rounded-2xl border border-slate-200 shadow-sm transition-all active:scale-95 text-sm">
+                            <svg class="w-5 h-5 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+                            </svg>
+                            <span id="copy-btn-text">کپی لینک دانلود</span>
+                        </button>
+                    </div>
+
+                    <!-- Meta specs and compatibility badges -->
+                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-y-2 gap-x-6 pt-2 text-xs text-slate-500 font-medium">
+                        <span class="flex items-center gap-1.5">
+                            <svg class="w-4 h-4 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            حجم کاملاً نامحدود (اشتراکی)
+                        </span>
+                        <span class="flex items-center gap-1.5">
+                            <svg class="w-4 h-4 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            اندروید ۷.۰ به بالا
+                        </span>
+                        <span class="flex items-center gap-1.5">
+                            <svg class="w-4 h-4 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            بازگشایی کامل هوش مصنوعی
+                        </span>
+                    </div>
+
+                </div>
+
+                <!-- Hero Visual / Feature Showcase Card (No Screenshots) -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="w-full max-w-sm space-y-4">
+                        <!-- Main Card -->
+                        <div class="bg-gradient-to-br from-brand-700 via-brand-600 to-blue-600 rounded-3xl p-6 text-white shadow-2xl relative overflow-hidden border border-brand-400/30 glow-blue">
+                            <div class="flex items-center justify-between border-b border-white/15 pb-4 mb-5">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-12 h-12 rounded-2xl overflow-hidden shadow-md flex items-center justify-center bg-white/10 border border-white/20">
+                                        <!-- User Logo Image -->
+                                        <img src="logo.png" alt="SaroNet" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/100x100/1d4ed8/ffffff?text=SaroNet'">
+                                    </div>
+                                    <div>
+                                        <h3 class="font-black text-lg">سارونت (SaroNet)</h3>
+                                        <p class="text-xs text-blue-200">سرویس اشتراک پرسرعت</p>
+                                    </div>
+                                </div>
+                                <span class="bg-emerald-400/20 text-emerald-300 text-xs px-2.5 py-1 rounded-full border border-emerald-400/30 font-bold flex items-center gap-1">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-300 animate-ping"></span>
+                                    نسخه ۲.۱.۱
+                                </span>
+                            </div>
+
+                            <!-- Subscription Badges Showcase -->
+                            <div class="space-y-3 text-sm">
+                                <div class="flex items-center justify-between p-3 rounded-xl bg-white/10 border border-white/10">
+                                    <span class="text-blue-100 flex items-center gap-2">
+                                        <svg class="w-4 h-4 text-brand-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+                                        احراز هویت:
+                                    </span>
+                                    <span class="font-bold text-white">نام کاربری و کلمه عبور</span>
+                                </div>
+
+                                <div class="flex items-center justify-between p-3 rounded-xl bg-white/10 border border-white/10">
+                                    <span class="text-blue-100 flex items-center gap-2">
+                                        <svg class="w-4 h-4 text-brand-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                                        سقف مصرف:
+                                    </span>
+                                    <span class="font-bold text-emerald-300">کاملاً نامحدود (بدون سقف)</span>
+                                </div>
+
+                                <div class="flex items-center justify-between p-3 rounded-xl bg-white/10 border border-white/10">
+                                    <span class="text-blue-100 flex items-center gap-2">
+                                        <svg class="w-4 h-4 text-brand-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                                        سرویس‌های هوش مصنوعی:
+                                    </span>
+                                    <span class="font-bold text-white">ChatGPT, Claude, Gemini</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mini highlight banner -->
+                        <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <div class="w-9 h-9 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center font-bold">
+                                    AI
+                                </div>
+                                <div class="text-xs">
+                                    <div class="font-bold text-slate-800">بدون مسدودی آی‌پی</div>
+                                    <div class="text-slate-500">دسترسی مستقیم به کلیه پلتفرم‌های AI</div>
+                                </div>
+                            </div>
+                            <span class="text-xs bg-emerald-100 text-emerald-700 font-bold px-2 py-1 rounded-md">۱۰۰٪ فعال</span>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-5 text-center">
-                    <div class="home-img">
-                        <div class="sircle">
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Grid Section -->
+    <section id="features" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="text-brand-600 font-extrabold text-sm tracking-widest uppercase">امکانات اختصاصی سارونت</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">چرا همه سارونت را انتخاب می‌کنند؟</h2>
+                <p class="text-slate-500 text-sm sm:text-base">سرویس اشتراکی با سرورهای اختصاصی، حجم نامحدود و دسترسی بدون قفل به تمام ابزارهای نوین وب.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Feature 1: AI Support -->
+                <div class="p-8 rounded-3xl bg-slate-50 hover:bg-brand-50/50 border border-slate-100 hover:border-brand-200 transition-all hover:shadow-lg hover:-translate-y-1 group">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-600 text-white flex items-center justify-center mb-6 shadow-md shadow-brand-500/20 group-hover:scale-110 transition-transform">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">پشتیبانی از تمامی سایت‌های هوش مصنوعی</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">دسترسی بدون خطای تحریم یا مسدودسازی به ChatGPT، Claude، Midjourney، Gemini و تمام ابزارهای روز دنیا با آی‌پی تمیز و معتبر.</p>
+                </div>
+
+                <!-- Feature 2: Encryption (NO 256-bit mention) -->
+                <div class="p-8 rounded-3xl bg-slate-50 hover:bg-brand-50/50 border border-slate-100 hover:border-brand-200 transition-all hover:shadow-lg hover:-translate-y-1 group">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-600 text-white flex items-center justify-center mb-6 shadow-md shadow-brand-500/20 group-hover:scale-110 transition-transform">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">امنیت پیشرفته و عدم ذخیره لاگ</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">اطلاعات شما کاملاً رمزنگاری شده و هیچ‌گونه سابقه یا ردی از فعالیت شما در سرورها ذخیره نمی‌گردد.</p>
+                </div>
+
+                <!-- Feature 3: Unlimited Volume -->
+                <div class="p-8 rounded-3xl bg-slate-50 hover:bg-brand-50/50 border border-slate-100 hover:border-brand-200 transition-all hover:shadow-lg hover:-translate-y-1 group">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-600 text-white flex items-center justify-center mb-6 shadow-md shadow-brand-500/20 group-hover:scale-110 transition-transform">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2 1.5 3 3.5 3h9c2 0 3.5-1 3.5-3V7c0-2-1.5-3-3.5-3h-9C5.5 4 4 5 4 7zM9 12h6m-3-3v6"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">ترافیک کاملاً نامحدود</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">بدون نگرانی از تمام شدن حجم بسته، با بالاترین کیفیت و سرعت به دانلود، آپلود و استریم نامحدود بپردازید.</p>
+                </div>
+
+                <!-- Feature 4: Username & Password Auth -->
+                <div class="p-8 rounded-3xl bg-slate-50 hover:bg-brand-50/50 border border-slate-100 hover:border-brand-200 transition-all hover:shadow-lg hover:-translate-y-1 group">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-600 text-white flex items-center justify-center mb-6 shadow-md shadow-brand-500/20 group-hover:scale-110 transition-transform">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">ورود اختصاصی با نام کاربری و رمز</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">اشتراک شما به صورت اختصاصی با نام کاربری و کلمه عبور مدیریت می‌شود تا تجربه کاربری منظم و آسانی داشته باشید.</p>
+                </div>
+
+                <!-- Feature 5: Compatibility -->
+                <div class="p-8 rounded-3xl bg-slate-50 hover:bg-brand-50/50 border border-slate-100 hover:border-brand-200 transition-all hover:shadow-lg hover:-translate-y-1 group">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-600 text-white flex items-center justify-center mb-6 shadow-md shadow-brand-500/20 group-hover:scale-110 transition-transform">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">سازگاری با تمام اپراتورها</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">عملکرد پایدار و بدون اختلال در سیمکارت‌های ایرانسل، همراه اول، رایتل و کلیه شرکت‌های ارائه‌دهنده اینترنت خانگی.</p>
+                </div>
+
+                <!-- Feature 6: Fast Setup -->
+                <div class="p-8 rounded-3xl bg-slate-50 hover:bg-brand-50/50 border border-slate-100 hover:border-brand-200 transition-all hover:shadow-lg hover:-translate-y-1 group">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-600 text-white flex items-center justify-center mb-6 shadow-md shadow-brand-500/20 group-hover:scale-110 transition-transform">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">سبک و بهینه برای اندروید ۷+</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">کدنویسی بهینه‌سازی شده بدون اشغال منابع، سازگار با انواع گوشی‌ها و تبلت‌های دارای اندروید ۷ به بالا.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Direct Download Highlight Hub -->
+    <section id="download" class="py-16 bg-gradient-to-b from-brand-50 to-white border-y border-brand-100">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-br from-brand-700 via-brand-600 to-blue-600 rounded-[32px] p-8 sm:p-12 text-white shadow-2xl relative overflow-hidden">
+                <!-- Decorative Circle -->
+                <div class="absolute -right-16 -bottom-16 w-64 h-64 bg-white/10 rounded-full blur-xl pointer-events-none"></div>
+
+                <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
+                    <div class="space-y-3 text-center md:text-right">
+                        <div class="inline-block bg-white/20 text-blue-100 px-3 py-1 rounded-lg text-xs font-bold">
+                            لینک مستقیم بدون فیلتر
                         </div>
-                        <img src="assets/images/2.png" alt="">
+                        <h2 class="text-2xl sm:text-3xl font-black">آماده اتصال به اینترنت پرسرعت هستید؟</h2>
+                        <p class="text-blue-100 text-sm max-w-lg leading-relaxed">
+                            هم‌اکنون نسخه ۲.۱.۱ نرم‌افزار سارونت را مستقیماً دانلود کنید و در کمتر از یک دقیقه به سرورهای پرسرعت متصل شوید.
+                        </p>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row items-center gap-4 w-full md:w-auto">
+                        <a href="https://github.com/saronetapp/SaroNet/releases/download/2.1.1/SaroNet_2.1.1.apk" 
+                           class="w-full sm:w-auto flex items-center justify-center gap-3 bg-white hover:bg-slate-100 text-brand-700 font-black px-8 py-4 rounded-2xl shadow-xl transition-all transform hover:scale-105 active:scale-95 text-base text-center">
+                            <svg class="w-6 h-6 text-brand-600 fill-current" viewBox="0 0 24 24">
+                                <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/>
+                            </svg>
+                            <span>دانلود SaroNet v2.1.1 (APK)</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Operating Systems Status -->
+            <div class="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-4">
+                
+                <!-- Android: Active -->
+                <div class="bg-white p-5 rounded-2xl border-2 border-brand-500 shadow-sm flex flex-col items-center text-center">
+                    <span class="text-xs bg-brand-100 text-brand-700 font-bold px-2 py-0.5 rounded-full mb-2">فعال و آماده</span>
+                    <span class="font-black text-slate-800">اندروید (Android)</span>
+                    <span class="text-xs text-brand-600 font-bold mt-1">نسخه ۷.۰ به بالا</span>
+                </div>
+
+                <!-- Windows: Coming Soon -->
+                <div class="bg-white/60 p-5 rounded-2xl border border-slate-200 flex flex-col items-center text-center opacity-70">
+                    <span class="text-xs bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded-full mb-2">به‌زودی</span>
+                    <span class="font-bold text-slate-700">ویندوز (Windows)</span>
+                    <span class="text-xs text-slate-400 mt-1">در دست آماده‌سازی</span>
+                </div>
+
+                <!-- iOS: Coming Soon -->
+                <div class="bg-white/60 p-5 rounded-2xl border border-slate-200 flex flex-col items-center text-center opacity-70">
+                    <span class="text-xs bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded-full mb-2">به‌زودی</span>
+                    <span class="font-bold text-slate-700">آیفون (iOS)</span>
+                    <span class="text-xs text-slate-400 mt-1">در دست آماده‌سازی</span>
+                </div>
+
+                <!-- macOS: Coming Soon -->
+                <div class="bg-white/60 p-5 rounded-2xl border border-slate-200 flex flex-col items-center text-center opacity-70">
+                    <span class="text-xs bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded-full mb-2">به‌زودی</span>
+                    <span class="font-bold text-slate-700">مک (macOS)</span>
+                    <span class="text-xs text-slate-400 mt-1">در دست آماده‌سازی</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Install Guide -->
+    <section id="guide" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14 space-y-2">
+                <span class="text-brand-600 font-bold text-sm">آموزش گام به گام</span>
+                <h2 class="text-3xl font-extrabold text-slate-900">نحوه نصب و راه‌اندازی اشتراک در ۳ مرحله ساده</h2>
+            </div>
+
+            <div class="space-y-6">
+                <!-- Step 1 -->
+                <div class="flex items-start gap-4 p-5 rounded-2xl bg-slate-50 border border-slate-200/80">
+                    <div class="w-10 h-10 rounded-xl bg-brand-600 text-white font-black flex items-center justify-center shrink-0">
+                        ۱
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-900 text-base mb-1">دانلود و نصب نرم‌افزار سارونت</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed">فایل نصب <code class="bg-slate-200 px-2 py-0.5 rounded text-xs text-slate-800">SaroNet_2.1.1.apk</code> را روی گوشی اندرویدی خود (اندروید ۷ یا بالاتر) دانلود و نصب کنید.</p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="flex items-start gap-4 p-5 rounded-2xl bg-slate-50 border border-slate-200/80">
+                    <div class="w-10 h-10 rounded-xl bg-brand-600 text-white font-black flex items-center justify-center shrink-0">
+                        ۲
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-900 text-base mb-1">ورود با نام کاربری و رمز عبور</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed">برنامه را باز کرده و اطلاعات حساب اشتراکی خود (نام کاربری و رمز عبور دریافتی) را در کادرهای مربوطه وارد کنید.</p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="flex items-start gap-4 p-5 rounded-2xl bg-slate-50 border border-slate-200/80">
+                    <div class="w-10 h-10 rounded-xl bg-brand-600 text-white font-black flex items-center justify-center shrink-0">
+                        ۳
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-900 text-base mb-1">اتصال با یک کلیک و دسترسی نامحدود</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed">دکمه اتصال را لمس کنید تا بلافاصله به اینترنت پایدار، با حجم کاملاً نامحدود و دسترسی بدون مرز به ابزارهای هوش مصنوعی متصل گردید.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Home section End -->
 
-    <!-- Feature Section Stard -->
-    <section class="feature section-padding" data-scroll-index="1" id="Features">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-8">
-                    <div class="section-title">
-                        <h2>ویژگی های <span>SaroNet</span></h2>
-                    </div>
-                </div>
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-slate-50 border-t border-slate-100">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-extrabold text-slate-900 mb-2">سوالات متداول</h2>
+                <p class="text-slate-500 text-sm">پاسخ به رایج‌ترین پرسش‌های کاربران درباره سرویس اشتراکی سارونت</p>
             </div>
-            <div class="row">
-                <div class="owl-carousel  feature-corosel" style="direction: ltr">
-                    <div class="feature-item">
-                        <div class="icon"> <i class="fas fa-headphones"></i> </div>
-                        <h3>پشتیبانی</h3>
-                        <p>پشتیبانی 24/7 در هر لحظه آماده پاسخگویی به شما</p>
-                    </div>
 
-                    <div class="feature-item">
-                        <div class="icon"> <i class="fas fa-handshake"></i> </div>
-                        <h3>ضمانت</h3>
-                        <p>تمامی سرویس ها دارای ضمانت بی قید و شرط تا آخرین روز اشتراک هستند</p>
-                    </div>
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="bg-white rounded-2xl border border-slate-200 p-5">
+                    <h3 class="font-bold text-slate-900 text-base mb-2">آیا سارونت رایگان است؟</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">خیر، سارونت رایگان نیست و به صورت یک سرویس اشتراکی با سرورهای اختصاصی و ترافیک کاملاً نامحدود ارائه می‌شود. برای ورود و استفاده به نام کاربری و رمز عبور حساب اشتراکی خود نیاز دارید.</p>
+                </div>
 
-                    <div class="feature-item">
-                        <div class="icon"> <i class="fas fa-check-circle"></i> </div>
-                        <h3>پایداری سرویس ها</h3>
-                        <p>سرویس ها از پایداری 99 درصدی برخوردار میباشند</p>
-                    </div>
+                <!-- FAQ Item 2 -->
+                <div class="bg-white rounded-2xl border border-slate-200 p-5">
+                    <h3 class="font-bold text-slate-900 text-base mb-2">آیا سایت‌های هوش مصنوعی مثل ChatGPT باز می‌شوند؟</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">بله، آی‌پی سرورهای سارونت به نحوی بهینه‌سازی شده‌اند که تمامی سایت‌های هوش مصنوعی نظیر ChatGPT، Claude و Gemini بدون مشکل مسدودی یا ارور مکان جغرافیایی به سرعت باز شوند.</p>
+                </div>
 
-                    <div class="feature-item">
-                        <div class="icon"> <i class="fas fa-map-marker "></i> </div>
-                        <h3>آیپی ثابت</h3>
-                        <p>ارائه سرور های آیپی ثابت</p>
-                        <br>
-                    </div>
+                <!-- FAQ Item 3 -->
+                <div class="bg-white rounded-2xl border border-slate-200 p-5">
+                    <h3 class="font-bold text-slate-900 text-base mb-2">امنیت و حریم خصوصی در سارونت چگونه است؟</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">اطلاعات شما کاملاً رمزنگاری شده و هیچ‌گونه سابقه یا ردی از فعالیت شما در سرورها ذخیره نمی‌گردد.</p>
+                </div>
 
-                    <div class="feature-item">
-                        <div class="icon"> <i class="fas fa-globe"></i> </div>
-                        <h3>لوکیشن های متنوع</h3>
-                        <p>ارائه سرور هایی با چندین لوکیشن متفاوت</p>
-                        <br>
-                    </div>
-
-                    <div class="feature-item">
-                        <div class="icon"> <i class="fas fa-user-shield"></i> </div>
-                        <h3>حفظ حریم خصوصی</h3>
-                        <p>تضمین حفظ حریم خصوصی کاربران با بالاترین امنیت</p>
-                    </div>
-
+                <!-- FAQ Item 4 -->
+                <div class="bg-white rounded-2xl border border-slate-200 p-5">
+                    <h3 class="font-bold text-slate-900 text-base mb-2">در صورت بروز مشکل در اتصال چه اقدامی انجام دهم؟</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">در صورت بروز اختلال در اینترنت، یکبار حالت پرواز گوشی خود را روشن و خاموش کرده و مجدداً دکمه اتصال را لمس کنید یا از صحت نام کاربری و رمز عبور وارد شده اطمینان حاصل فرمایید.</p>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Feature Section End -->
 
+    <!-- Sticky Mobile Floating Download Button (Always in sight on phones) -->
+    <div class="md:hidden fixed bottom-4 inset-x-4 z-40">
+        <a href="https://github.com/saronetapp/SaroNet/releases/download/2.1.1/SaroNet_2.1.1.apk" 
+           class="flex items-center justify-between w-full bg-brand-600 text-white font-extrabold py-3.5 px-6 rounded-2xl shadow-2xl border border-white/20 active:scale-95 transition-transform">
+            <span class="flex items-center gap-2">
+                <svg class="w-5 h-5 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                </svg>
+                دانلود مستقیم SaroNet
+            </span>
+            <span class="bg-white/20 text-xs px-2.5 py-1 rounded-lg">v2.1.1</span>
+        </a>
+    </div>
 
-    <!-- Fun Facts section End -->
-
-    <!-- App Screenshoot section Stard -->
-    <section class="app-screenshort section-padding" data-scroll-index="2" id="Screenshoot">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="section-title">
-                        <h2>تصاویر <span>اپلیکیشن</span></h2>
-                    </div>
-                </div>
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 py-12 pb-24 md:pb-12 text-center text-sm text-slate-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+            <div class="flex items-center justify-center gap-2 font-bold text-slate-700">
+                <span>سارونت (SaroNet VPN)</span>
+                <span>•</span>
+                <span>نسخه ۲.۱.۱</span>
             </div>
-            <div class="row">
-                <div class="owl-carousel screenshort-crosel" style="direction: ltr">
-                    <div class="screenshort-item">
-                        <img src="assets/images/1.png" alt="ScreenShot">
-                    </div>
-                    <div class="screenshort-item">
-                        <img src="assets/images/2.png" alt="ScreenShot">
-                    </div>
-                    <div class="screenshort-item">
-                        <img src="assets/images/3.png" alt="ScreenShot">
-                    </div>
-                    <div class="screenshort-item">
-                        <img src="assets/images/4.png" alt="ScreenShot">
-                    </div>
-                    <div class="screenshort-item">
-                        <img src="assets/images/5.png" alt="ScreenShot">
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- App Screenshoot section End -->
-
-
-    <!-- faq section Stard -->
-  <!--  <section class="faq section-padding">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="section-title">
-                        <h2>سوالات <span>متداول</span></h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div id="accordion">
-                        <div class="accordion-item">
-                            <div class="accordion-header collapsed" data-toggle="collapse" data-target="#collapse1">
-                                <h3>چطوری ثبت نام کنم؟</h3>
-                            </div>
-                            <div id="collapse1" class="collapse " data-parent="#accordion">
-                                <div class="accordion-body">
-                                    <p>ورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item">
-                            <div class="accordion-header collapsed" data-toggle="collapse" data-target="#collapse2">
-                                <h3>آیا ضمانت بازگشت وجه دارید؟</h3>
-                            </div>
-                            <div id="collapse2" class="collapse " data-parent="#accordion">
-                                <div class="accordion-body">
-                                    <p>ورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item">
-                            <div class="accordion-header collapsed" data-toggle="collapse" data-target="#collapse3">
-                                <h3>چگونه میتونم اعتماد کنم؟</h3>
-                            </div>
-                            <div id="collapse3" class="collapse " data-parent="#accordion">
-                                <div class="accordion-body">
-                                    <p>ورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item">
-                            <div class="accordion-header collapsed" data-toggle="collapse" data-target="#collapse4">
-                                <h3>پشتیبانی چگونه است؟</h3>
-                            </div>
-                            <div id="collapse4" class="collapse " data-parent="#accordion">
-                                <div class="accordion-body">
-                                    <p>ورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>-->
-    <!-- faq section End -->
-
-    <!-- contact Section Stard  -->
-    <section class="contact section-padding" data-scroll-index="6">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="section-title">
-                        <h2>تماس <span>با ما</span></h2>
-<!--
-                        <p style="margin-top: 30px;text-align: center;">برای دریافت نمایندگی کافیست فرم زیر را پر کنید و درخواست خود را ارسال کنید کارشناسان ما در کمترین زمان به درخواست شما رسیدگی خواهند کرد و با شما تماس خواهند گرفت</p>
--->
-
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12 col-md-12" style="justify-content: center;justify-items: center;display: flex">
-                    <div class="contact-info">
-             <!--           <h3>دریافت نمایندگی سارونت</h3>-->
-                        <!--<div class="contact-info-item">
-                            <i class="fab fa-telegram"></i>
-                            <h4>تلگرام پشتیبانی</h4>
-                            <a class="btn-link" href="https://t.me/saronet_support" >saronet_support</a>
-                        </div>-->
-                        <div class="contact-info-item">
-                            <i class="fab fa-telegram"></i>
-                            <h4>کانال تلگرام</h4>
-                            <a class="btn-link" href="https://t.me/saro_net" >saro_net</a>
-                        </div>
-                        <div class="contact-info-item">
-                            <i class="fas fa-envelope"></i>
-                            <h4>ایمیل ما</h4>
-                            <a class="btn-link" href="mailto:saronet9@gmail.com">saronet9@gmail.com</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- contact Section End -->
-
-    <!-- footer section Stard -->
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="footer-col">
-                        <h3>درباره اپلیکیشن</h3>
-                        <p>سارونت ابزاری برای گذر از فیلترینگ و تحریم با سرعت و امنیت بالا</p>
-                    </div>
-                </div>
-        <!--        <div class="col-lg-3 col-md-6">
-                    <div class="footer-col">
-                        <h3>شرکت</h3>
-                        <ul>
-                            <li><a href="#">سیاست حفظ حریم خصوصی</a></li>
-                            <li><a href="#">قوانین و مقررات</a></li>
-                            <li><a href="#">وبلاگ</a></li>
-                            <li><a href="#">خدمات ما</a></li>
-                        </ul>
-                    </div>
-                </div>-->
-                <div class="col-lg-4 col-md-6">
-                    <div class="footer-col">
-                        <h3>لینک های سریع</h3>
-                        <ul>
-                            <li><a href="#Home">خانه</a></li>
-                            <li><a href="#Features">ویژگی ها</a></li>
-                            <li><a href="#Screenshoot">تصاویر اپلیکیشن</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="footer-col">
-                        <h3>شبکه های اجتماعی</h3>
-                        <ul>
-                            <!--<li><a href="https://t.me/saronet_support">تلگرام پشتیبانی</a></li>-->
-                            <li><a href="https://t.me/saronet">کانال تلگرام</a></li>
-                            <li><a href="mailto:saronet9@gmail.com">ایمیل</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p class="copyright-text">SaroNet © 2024-2026</p>
-                </div>
-            </div>
+            <p class="text-xs text-slate-400 max-w-md mx-auto">
+                تمامی حقوق محفوظ است. طراحی شده برای حفظ حریم خصوصی، امنیت تبادل اطلاعات و دسترسی آزاد به اینترنت.
+            </p>
         </div>
     </footer>
-    <!-- footer section End -->
-    <!-- Toggle Theme Stard- dark and light theme -->
-    <div class="toggle-theme">
-        <i class="fas fa-moon"></i>
+
+    <!-- Copy Toast Notification -->
+    <div id="toast" class="fixed top-6 left-1/2 -translate-x-1/2 z-50 bg-slate-900 text-white px-5 py-3 rounded-xl shadow-xl flex items-center gap-3 text-sm font-semibold opacity-0 pointer-events-none transition-all duration-300 transform -translate-y-2">
+        <svg class="w-5 h-5 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+        </svg>
+        <span>لینک مستقیم دانلود کپی شد!</span>
     </div>
-    <!-- Toggle Theme Stard -->
 
-    <!-- Video Popup button Stard -->
-    <div class="video-popup">
-        <div class="video-popup-inner">
-            <i class="fas fa-times video-popup-close"></i>
-            <div class="iframe-box">
-<!--                <iframe id="plear-1" src="https://www.aparat.com/video/video/embed/videohash/GioFP/vt/frame" frameborder="0" autoplay;-->
-<!--                    clipboard-write; encrypted-media; gyroscope; picture-in-picture allowfullscreen></iframe>-->
-                <iframe id="plear-1" src=""  allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
-            </div>
-        </div>
-    </div>
-    <!-- Video Popup button End -->
+    <!-- Interactive Scripts -->
+    <script>
+        const downloadUrl = "https://github.com/saronetapp/SaroNet/releases/download/2.1.1/SaroNet_2.1.1.apk";
 
-    <!-- Jquery main file -->
-    <script src="assets/js/jquery.min.js"></script>
-    <!-- owl carousel -->
-    <script src="assets/js/owl.carousel.min.js"></script>
-    <!-- popper js -->
-    <script src="assets/js/popper.min.js"></script>
-    <!-- ScrollIt -->
-    <script src="assets/js/scrollIt.min.js"></script>
-    <!--Bootstrap JS-->
-    <script src="assets/js/bootstrap.min.js"></script>
-    <!--Theme Custom JS [ main.js ]-->
-    <script src="assets/js/main.js"></script>
+        function copyDownloadLink() {
+            // Robust clipboard copy with fallback
+            const tempInput = document.createElement("input");
+            tempInput.value = downloadUrl;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
 
-    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-  <!--  <script>
-        window.ga = function () {
-            ga.q.push(arguments)
-        };
-        ga.q = [];
-        ga.l = +new Date;
-        ga('create', 'UA-XXXXX-Y', 'auto');
-        ga('set', 'anonymizeIp', true);
-        ga('set', 'transport', 'beacon');
-        ga('send', 'pageview')
+            // Show Toast
+            const toast = document.getElementById("toast");
+            const btnText = document.getElementById("copy-btn-text");
+            
+            if (btnText) {
+                btnText.textContent = "کپی شد!";
+            }
+
+            toast.classList.remove("opacity-0", "pointer-events-none", "-translate-y-2");
+            toast.classList.add("opacity-100", "translate-y-0");
+
+            setTimeout(() => {
+                toast.classList.remove("opacity-100", "translate-y-0");
+                toast.classList.add("opacity-0", "pointer-events-none", "-translate-y-2");
+                if (btnText) {
+                    btnText.textContent = "کپی لینک دانلود";
+                }
+            }, 2500);
+        }
     </script>
-    <script src="https://www.google-analytics.com/analytics.js" async></script>-->
 </body>
-
 </html>
