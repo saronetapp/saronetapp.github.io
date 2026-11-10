@@ -70,21 +70,17 @@
             border-radius: 50%; z-index: -1; filter: blur(40px);
         }
         
-        /* افکت موبایل ها - ابتدا کج، هاور صاف */
         .phone-mockup {
             border: 8px solid #0f172a; border-radius: 2.5rem;
-            /* حالت پیش فرض: کج و 3D */
             transform: translateY(-5px) rotateY(15deg) rotateX(10deg);
             box-shadow: -15px 25px 40px -10px rgba(29, 78, 216, 0.3);
             background: #020617; position: relative; overflow: hidden;
             transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         }
         .phone-mockup:hover {
-            /* حالت هاور: کاملا صاف */
             transform: translateY(0) rotateY(0deg) rotateX(0deg);
             box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.5);
         }
-        
         .phone-mockup::after {
             content: ''; position: absolute; top: 0; left: -100%; width: 50%; height: 100%;
             background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0) 100%);
@@ -124,7 +120,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col lg:flex-row gap-12 lg:gap-8 items-center">
                 
-                <!-- بخش کارت دانلود حرفه ای (اولویت اول در موبایل) -->
+                <!-- بخش کارت دانلود -->
                 <div class="w-full lg:w-5/12 flex justify-center order-first lg:order-last relative z-10">
                     <div class="relative w-full max-w-[380px]">
                         <div class="absolute -inset-1 bg-gradient-to-br from-brand-400 to-blue-600 rounded-[2.5rem] blur-xl opacity-20 animate-pulse"></div>
@@ -137,7 +133,6 @@
                                 <h3 class="font-black text-xl text-slate-900">سارونت (SaroNet)</h3>
                             </div>
 
-                            <!-- لیست مشخصات به صورت ردیفی و نرم -->
                             <div class="bg-slate-50/70 rounded-xl border border-slate-100 p-4 mb-6">
                                 <ul class="space-y-3.5 text-[13px]">
                                     <li class="flex items-center justify-between border-b border-slate-200/60 pb-2.5">
@@ -159,7 +154,6 @@
                                 </ul>
                             </div>
 
-                            <!-- دکمه دانلود اصلی -->
                             <a id="main-download-btn" href="https://github.com/saronetapp/SaroNet/releases/download/2.1.3/SaroNet_2.1.3.apk" 
                                class="flex items-center justify-center w-full bg-gradient-to-r from-brand-600 to-blue-500 hover:from-brand-700 hover:to-blue-600 text-white py-4 rounded-xl shadow-[0_12px_24px_-8px_rgba(37,99,235,0.4)] transition-all transform hover:-translate-y-1">
                                 <div class="flex items-center gap-2">
@@ -170,7 +164,6 @@
                                 </div>
                             </a>
                             
-                            <!-- دکمه کپی لینک دانلود -->
                             <button onclick="copyDownloadLink()" class="mt-4 text-[13px] text-brand-600 hover:text-brand-800 font-bold w-full text-center flex justify-center items-center gap-1.5 transition-colors">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
@@ -183,8 +176,6 @@
 
                 <!-- بخش محتوای متنی -->
                 <div class="w-full lg:w-7/12 text-center lg:text-right z-10">
-                    
-                    <!-- کادر خلاقانه تیتر -->
                     <div class="relative inline-block mb-8">
                         <div class="absolute inset-0 bg-gradient-to-r from-brand-500 via-blue-400 to-purple-500 rounded-3xl blur opacity-30"></div>
                         <div class="relative bg-white/60 backdrop-blur-sm border-2 border-white rounded-3xl p-6 sm:p-8 shadow-sm">
@@ -199,7 +190,6 @@
                         سرویس اشتراکی با سرورهای اختصاصی؛ مناسب وب‌گردی پرسرعت، استریم بدون قطعی در یوتیوب و اینستاگرام، و دسترسی تضمینی به تمامی سایت‌ها.
                     </p>
 
-                    <!-- امکانات اصلی -->
                     <div class="space-y-3 max-w-lg mx-auto lg:mx-0 text-right">
                         <div class="flex items-center gap-4 bg-white/60 backdrop-blur-md border border-slate-200/50 rounded-2xl p-3.5 shadow-sm transition-all hover:bg-white">
                             <div class="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
@@ -236,47 +226,26 @@
         </div>
     </section>
 
-    <!-- نوار لوکیشن ها با پرچم های گرافیکی (حل قطعی مشکل ویندوز) -->
+    <!-- لوکیشن‌ها -->
     <div class="bg-white border-b border-slate-100 py-5">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-wrap justify-center items-center gap-x-6 gap-y-4 text-[14px] font-bold text-slate-600">
-                <div class="flex items-center gap-2 hover:text-brand-600 transition-colors cursor-default">
-                    <img src="https://flagcdn.com/w40/de.png" alt="آلمان" class="w-6 rounded-[4px] shadow-sm">
-                    آلمان
-                </div>
-                <div class="flex items-center gap-2 hover:text-brand-600 transition-colors cursor-default">
-                    <img src="https://flagcdn.com/w40/tr.png" alt="ترکیه" class="w-6 rounded-[4px] shadow-sm">
-                    ترکیه
-                </div>
-                <div class="flex items-center gap-2 hover:text-brand-600 transition-colors cursor-default">
-                    <img src="https://flagcdn.com/w40/fi.png" alt="فنلاند" class="w-6 rounded-[4px] shadow-sm">
-                    فنلاند
-                </div>
-                <div class="flex items-center gap-2 hover:text-brand-600 transition-colors cursor-default">
-                    <img src="https://flagcdn.com/w40/fr.png" alt="فرانسه" class="w-6 rounded-[4px] shadow-sm">
-                    فرانسه
-                </div>
-                <div class="flex items-center gap-2 hover:text-brand-600 transition-colors cursor-default">
-                    <img src="https://flagcdn.com/w40/nl.png" alt="هلند" class="w-6 rounded-[4px] shadow-sm">
-                    هلند
-                </div>
-                <div class="flex items-center gap-2 hover:text-brand-600 transition-colors cursor-default">
-                    <img src="https://flagcdn.com/w40/us.png" alt="آمریکا" class="w-6 rounded-[4px] shadow-sm">
-                    آمریکا
-                </div>
-                <div class="flex items-center gap-2 hover:text-brand-600 transition-colors cursor-default">
-                    <img src="https://flagcdn.com/w40/gb.png" alt="انگلیس" class="w-6 rounded-[4px] shadow-sm">
-                    انگلیس
-                </div>
+                <div class="flex items-center gap-2 hover:text-brand-600 transition-colors cursor-default"><img src="https://flagcdn.com/w40/de.png" alt="آلمان" class="w-6 rounded-[4px] shadow-sm"> آلمان</div>
+                <div class="flex items-center gap-2 hover:text-brand-600 transition-colors cursor-default"><img src="https://flagcdn.com/w40/tr.png" alt="ترکیه" class="w-6 rounded-[4px] shadow-sm"> ترکیه</div>
+                <div class="flex items-center gap-2 hover:text-brand-600 transition-colors cursor-default"><img src="https://flagcdn.com/w40/fi.png" alt="فنلاند" class="w-6 rounded-[4px] shadow-sm"> فنلاند</div>
+                <div class="flex items-center gap-2 hover:text-brand-600 transition-colors cursor-default"><img src="https://flagcdn.com/w40/fr.png" alt="فرانسه" class="w-6 rounded-[4px] shadow-sm"> فرانسه</div>
+                <div class="flex items-center gap-2 hover:text-brand-600 transition-colors cursor-default"><img src="https://flagcdn.com/w40/nl.png" alt="هلند" class="w-6 rounded-[4px] shadow-sm"> هلند</div>
+                <div class="flex items-center gap-2 hover:text-brand-600 transition-colors cursor-default"><img src="https://flagcdn.com/w40/us.png" alt="آمریکا" class="w-6 rounded-[4px] shadow-sm"> آمریکا</div>
+                <div class="flex items-center gap-2 hover:text-brand-600 transition-colors cursor-default"><img src="https://flagcdn.com/w40/gb.png" alt="انگلیس" class="w-6 rounded-[4px] shadow-sm"> انگلیس</div>
             </div>
         </div>
     </div>
 
-    <!-- پلتفرم ها -->
+    <!-- پلتفرم‌ها -->
     <section class="py-12 bg-slate-50 border-b border-slate-100">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
-                <div class="bg-white rounded-[1.5rem] p-4 shadow-sm border-2 border-brand-500 flex flex-col items-center text-center transform transition-transform hover:-translate-y-1">
+                <div class="bg-white rounded-[1.5rem] p-4 shadow-sm border-2 border-brand-500 flex flex-col items-center text-center">
                     <div class="w-12 h-12 bg-brand-50 rounded-full flex items-center justify-center text-brand-600 mb-3">
                         <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-1.0002 0-.5516.4482-1.0002.9993-1.0002.5516 0 .9997.4486.9997 1.0002 0 .5516-.4481 1.0002-.9997 1.0002m-11.046 0c-.5511 0-.9993-.4486-.9993-1.0002 0-.5516.4482-1.0002.9993-1.0002.5516 0 .9997.4486.9997 1.0002 0 .5516-.4481 1.0002-.9997 1.0002m11.4045-6.02l1.996-3.4565c.1011-.1756.0409-.4013-.1347-.5024-.1756-.1011-.4013-.0409-.5024.1347l-2.0232 3.5042c-1.4057-.6438-2.981-.9988-4.7172-.9988-1.7362 0-3.3115.355-4.7172.9988l-2.0232-3.5042c-.1011-.1756-.3268-.2358-.5024-.1347-.1756.1011-.2358.3268-.1347.5024l1.996 3.4565c-3.1362 1.705-5.263 4.887-5.263 8.6586h21.1858c0-3.7716-2.1268-6.9536-5.263-8.6586"/></svg>
                     </div>
@@ -284,37 +253,26 @@
                     <span class="text-[10px] bg-brand-100 text-brand-700 px-2.5 py-0.5 rounded-full mt-2 font-bold">فعال و آماده</span>
                 </div>
                 <div class="bg-white/50 rounded-[1.5rem] p-4 border border-slate-200 flex flex-col items-center text-center opacity-70">
-                    <div class="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center text-slate-500 mb-3">
-                        <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.19 2.31-.88 3.5-.84 1.5.05 2.78.69 3.52 1.84-2.9 1.63-2.4 5.37.5 6.6-1.02 2.05-1.63 3.62-2.6 4.57zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.02 4.36-3.74 4.25z"/></svg>
-                    </div>
-                    <span class="font-bold text-slate-600 text-sm">نسخه آیفون</span>
+                    <span class="font-bold text-slate-600 text-sm mt-3">نسخه آیفون</span>
                     <span class="text-[10px] bg-slate-200 text-slate-600 px-2.5 py-0.5 rounded-full mt-2">به‌زودی</span>
                 </div>
                 <div class="bg-white/50 rounded-[1.5rem] p-4 border border-slate-200 flex flex-col items-center text-center opacity-70">
-                    <div class="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center text-slate-500 mb-3">
-                        <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M2.5 11.5V3L11 2v9.5H2.5zm9.5 0V1.5L21.5 0V11.5H12zm-9.5 1H11V22l-8.5-1v-8.5zm9.5 0H21.5V24L12 22.5V12.5z"/></svg>
-                    </div>
-                    <span class="font-bold text-slate-600 text-sm">نسخه ویندوز</span>
+                    <span class="font-bold text-slate-600 text-sm mt-3">نسخه ویندوز</span>
                     <span class="text-[10px] bg-slate-200 text-slate-600 px-2.5 py-0.5 rounded-full mt-2">به‌زودی</span>
                 </div>
                 <div class="bg-white/50 rounded-[1.5rem] p-4 border border-slate-200 flex flex-col items-center text-center opacity-70">
-                    <div class="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center text-slate-500 mb-3">
-                        <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M20 7.5l-8-4-8 4v9l8 4 8-4v-9zm-8-2.3l5.8 2.9-5.8 2.9-5.8-2.9 5.8-2.9zm-6.8 4.2l5.8 2.9v6.8l-5.8-2.9v-6.8zm13.6 0v6.8l-5.8 2.9v-6.8l5.8-2.9z"/></svg>
-                    </div>
-                    <span class="font-bold text-slate-600 text-sm">نسخه مک</span>
+                    <span class="font-bold text-slate-600 text-sm mt-3">نسخه مک</span>
                     <span class="text-[10px] bg-slate-200 text-slate-600 px-2.5 py-0.5 rounded-full mt-2">به‌زودی</span>
                 </div>
                 <div class="bg-white/50 rounded-[1.5rem] p-4 border border-slate-200 flex flex-col items-center text-center opacity-70">
-                    <div class="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center text-slate-500 mb-3">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M6 9l4 3-4 3M14 15h4"/></svg>
-                    </div>
-                    <span class="font-bold text-slate-600 text-sm">نسخه لینوکس</span>
+                    <span class="font-bold text-slate-600 text-sm mt-3">نسخه لینوکس</span>
                     <span class="text-[10px] bg-slate-200 text-slate-600 px-2.5 py-0.5 rounded-full mt-2">به‌زودی</span>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- ویژگی‌ها -->
     <section id="features" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
@@ -323,46 +281,173 @@
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- باکس 1 -->
-                <div class="p-8 rounded-[2rem] bg-slate-50 border border-slate-100 soft-hover transition-all group">
-                    <div class="w-14 h-14 rounded-[1.25rem] bg-brand-50 text-brand-600 flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform">
-                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-                    </div>
+                <div class="p-8 rounded-[2rem] bg-slate-50 border border-slate-100 soft-hover transition-all">
                     <h3 class="text-xl font-black text-slate-800 mb-3">وب‌گردی و شبکه‌های اجتماعی</h3>
                     <p class="text-slate-500 text-sm leading-relaxed">تماشای ویدیوهای یوتیوب با کیفیت بالا، وب‌گردی پرسرعت و روان، استفاده بدون قطعی از اینستاگرام.</p>
                 </div>
-                
-                <!-- باکس 2 -->
-                <div class="p-8 rounded-[2rem] bg-slate-50 border border-slate-100 soft-hover transition-all group">
-                    <div class="w-14 h-14 rounded-[1.25rem] bg-brand-50 text-brand-600 flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform">
-                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
-                    </div>
+                <div class="p-8 rounded-[2rem] bg-slate-50 border border-slate-100 soft-hover transition-all">
                     <h3 class="text-xl font-black text-slate-800 mb-3">ترید و آی‌پی ثابت</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed">سارونت با ارائه آی‌پی ثابت و پایدار، انتخابی ایده‌آل برای تریدرها است. همچنین در صورت اختلال اینترنت، قابلیت کیل‌سوییچ از نشت آی‌پی شما جلوگیری می‌کند.</p>
+                    <p class="text-slate-500 text-sm leading-relaxed">سارونت با ارائه آی‌پی ثابت و پایدار، انتخابی ایده‌آل برای تریدرها است.</p>
                 </div>
-                
-                <!-- باکس 3 -->
-                <div class="p-8 rounded-[2rem] bg-slate-50 border border-slate-100 soft-hover transition-all group">
-                    <div class="w-14 h-14 rounded-[1.25rem] bg-brand-50 text-brand-600 flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform">
-                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"/></svg>
-                    </div>
+                <div class="p-8 rounded-[2rem] bg-slate-50 border border-slate-100 soft-hover transition-all">
                     <h3 class="text-xl font-black text-slate-800 mb-3">سازگاری با تمام اپراتورها</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed">عملکرد پایدار و بدون اختلال در سیمکارت‌های ایرانسل، همراه اول، رایتل و کلیه شرکت‌های ارائه‌دهنده اینترنت خانگی.</p>
+                    <p class="text-slate-500 text-sm leading-relaxed">عملکرد پایدار و بدون اختلال در سیمکارت‌های ایرانسل، همراه اول، رایتل و اینترنت خانگی.</p>
                 </div>
-
-                <!-- باکس 4 -->
-                <div class="p-8 rounded-[2rem] bg-slate-50 border border-slate-100 soft-hover transition-all group">
-                    <div class="w-14 h-14 rounded-[1.25rem] bg-brand-50 text-brand-600 flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform">
-                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
-                    </div>
+                <div class="p-8 rounded-[2rem] bg-slate-50 border border-slate-100 soft-hover transition-all">
                     <h3 class="text-xl font-black text-slate-800 mb-3">ترافیک نامحدود و پورت ۱۰ گیگ</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed">اشتراک‌های سارونت بدون سقف مصرف بوده و استفاده از سرورهای اختصاصی با پورت قدرتمند ۱۰ گیگابیت بر ثانیه، اتصالی بدون افت سرعت و نامحدود را تضمین می‌کند.</p>
+                    <p class="text-slate-500 text-sm leading-relaxed">اشتراک‌های سارونت بدون سقف مصرف و با پورت قدرتمند ۱۰ گیگابیت بر ثانیه ارائه می‌شوند.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- محیط برنامه -->
     <section id="screens" class="py-24 bg-slate-50 border-t border-slate-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
-                <span class="text-brand-500
+                <span class="text-brand-500 font-extrabold text-sm tracking-widest uppercase">رابط کاربری پیشرفته</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-slate-900">محیط کاربری ساده، تاریک و مدرن</h2>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 justify-items-center">
+                <div class="flex flex-col items-center space-y-5 max-w-[260px] w-full">
+                    <div class="phone-mockup w-full aspect-[9/19] relative group"><div class="phone-notch"></div><img src="assets/screen_connected.png" class="w-full h-full object-cover"></div>
+                    <h4 class="font-bold text-slate-800">اتصال پایدار و پرسرعت</h4>
+                </div>
+                <div class="flex flex-col items-center space-y-5 max-w-[260px] w-full">
+                    <div class="phone-mockup w-full aspect-[9/19] relative group"><div class="phone-notch"></div><img src="assets/screen_servers.png" class="w-full h-full object-cover"></div>
+                    <h4 class="font-bold text-slate-800">سرورهای اختصاصی و بهینه</h4>
+                </div>
+                <div class="flex flex-col items-center space-y-5 max-w-[260px] w-full">
+                    <div class="phone-mockup w-full aspect-[9/19] relative group"><div class="phone-notch"></div><img src="assets/screen_login.png" class="w-full h-full object-cover"></div>
+                    <h4 class="font-bold text-slate-800">ورود با نام کاربری و رمز</h4>
+                </div>
+                <div class="flex flex-col items-center space-y-5 max-w-[260px] w-full">
+                    <div class="phone-mockup w-full aspect-[9/19] relative group"><div class="phone-notch"></div><img src="assets/screen_settings.png" class="w-full h-full object-cover"></div>
+                    <h4 class="font-bold text-slate-800">تکفیک ترافیک (Split Tunnel)</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- راهنمای نصب -->
+    <section id="guide" class="py-24 bg-white border-y border-slate-100">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14"><h2 class="text-3xl font-black text-slate-900">نحوه نصب در ۳ مرحله ساده</h2></div>
+            <div class="space-y-4">
+                <div class="flex items-center gap-5 p-5 rounded-[1.5rem] bg-slate-50 border border-slate-100">
+                    <div class="w-12 h-12 rounded-2xl bg-brand-100 text-brand-600 font-black text-xl flex items-center justify-center shrink-0">۱</div>
+                    <div><h4 class="font-bold text-slate-900 text-base">دانلود و نصب نرم‌افزار</h4><p class="text-slate-500 text-sm mt-1">فایل نصب <span class="bg-slate-200/50 px-1.5 rounded text-xs">SaroNet_2.1.3.apk</span> را دانلود و نصب کنید.</p></div>
+                </div>
+                <div class="flex items-center gap-5 p-5 rounded-[1.5rem] bg-slate-50 border border-slate-100">
+                    <div class="w-12 h-12 rounded-2xl bg-brand-100 text-brand-600 font-black text-xl flex items-center justify-center shrink-0">۲</div>
+                    <div><h4 class="font-bold text-slate-900 text-base">ورود با اکانت کاربری</h4><p class="text-slate-500 text-sm mt-1">اطلاعات حساب اشتراکی خود را در کادرهای مربوطه وارد کنید.</p></div>
+                </div>
+                <div class="flex items-center gap-5 p-5 rounded-[1.5rem] bg-slate-50 border border-slate-100">
+                    <div class="w-12 h-12 rounded-2xl bg-brand-100 text-brand-600 font-black text-xl flex items-center justify-center shrink-0">۳</div>
+                    <div><h4 class="font-bold text-slate-900 text-base">اتصال با یک کلیک</h4><p class="text-slate-500 text-sm mt-1">دکمه اتصال را لمس کنید تا بلافاصله به اینترنت پایدار متصل گردید.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- سوالات متداول -->
+    <section id="faq" class="py-24 bg-slate-50">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12"><h2 class="text-3xl font-black text-slate-900">سوالات متداول</h2></div>
+            <div class="space-y-4">
+                <div class="bg-white rounded-[1.5rem] border border-slate-100 p-6 shadow-sm"><h3 class="font-bold text-slate-800 text-base mb-2">سارونت چگونه سرویسی است؟</h3><p class="text-slate-500 text-sm">سارونت بصورت اشتراک ماهیانه است.</p></div>
+                <div class="bg-white rounded-[1.5rem] border border-slate-100 p-6 shadow-sm"><h3 class="font-bold text-slate-800 text-base mb-2">میزان حجم مجاز چقدر است؟</h3><p class="text-slate-500 text-sm">ترافیک کاملا نامحدود هست.</p></div>
+                <div class="bg-white rounded-[1.5rem] border border-slate-100 p-6 shadow-sm"><h3 class="font-bold text-slate-800 text-base mb-2">نحوه ورود به چه شکل است؟</h3><p class="text-slate-500 text-sm">اشتراک ها بصورت نام کاربری و رمز عبور می‌باشند.</p></div>
+                <div class="bg-white rounded-[1.5rem] border border-slate-100 p-6 shadow-sm"><h3 class="font-bold text-slate-800 text-base mb-2">چه سیستم‌عامل‌هایی پشتیبانی می‌شوند؟</h3><p class="text-slate-500 text-sm">در حال حاضر فقط اندروید پشتیبانی میشود.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-white border-t border-slate-100 py-12 pb-28 md:pb-12 text-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+            <div class="flex items-center justify-center gap-2 font-bold text-slate-800"><span>سارونت (SaroNet VPN)</span></div>
+            <p class="text-xs text-slate-400 max-w-md mx-auto">طراحی شده برای حفظ حریم خصوصی و دسترسی آزاد به اینترنت.</p>
+        </div>
+    </footer>
+
+    <!-- دکمه دانلود چسبان موبایل -->
+    <div id="sticky-download-btn" class="md:hidden fixed bottom-4 inset-x-4 z-40 transform translate-y-24 opacity-0 transition-all duration-300">
+        <a href="https://github.com/saronetapp/SaroNet/releases/download/2.1.3/SaroNet_2.1.3.apk" 
+           class="flex items-center justify-center gap-3 w-full bg-slate-900 text-white font-bold py-4 px-6 rounded-[1.25rem] shadow-2xl border border-slate-700 active:scale-95">
+            <svg class="w-5 h-5 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+            <span>دانلود آخرین نسخه سارونت</span>
+        </a>
+    </div>
+
+    <!-- توست پیام -->
+    <div id="toast" class="fixed top-6 left-1/2 -translate-x-1/2 z-50 bg-slate-900 text-white px-5 py-3 rounded-2xl shadow-xl flex items-center gap-3 text-sm font-semibold opacity-0 pointer-events-none transition-all duration-300 transform -translate-y-2">
+        <svg class="w-5 h-5 text-emerald-400 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+        <span>لینک دانلود با موفقیت کپی شد!</span>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mainDownloadBtn = document.getElementById('main-download-btn');
+            const stickyDownloadBtn = document.getElementById('sticky-download-btn');
+            
+            if(mainDownloadBtn && stickyDownloadBtn) {
+                const observer = new IntersectionObserver((entries) => {
+                    if(entries[0].isIntersecting) {
+                        stickyDownloadBtn.classList.remove('translate-y-0', 'opacity-100');
+                        stickyDownloadBtn.classList.add('translate-y-24', 'opacity-0');
+                    } else {
+                        stickyDownloadBtn.classList.remove('translate-y-24', 'opacity-0');
+                        stickyDownloadBtn.classList.add('translate-y-0', 'opacity-100');
+                    }
+                }, { threshold: 0 });
+                observer.observe(mainDownloadBtn);
+            }
+        });
+
+        const downloadUrl = "https://github.com/saronetapp/SaroNet/releases/download/2.1.3/SaroNet_2.1.3.apk";
+        
+        async function copyDownloadLink() {
+            try {
+                if (navigator.clipboard && navigator.clipboard.writeText) {
+                    await navigator.clipboard.writeText(downloadUrl);
+                    showToast("لینک دانلود با موفقیت کپی شد!", true);
+                } else {
+                    const tempInput = document.createElement("input");
+                    tempInput.value = downloadUrl;
+                    document.body.appendChild(tempInput);
+                    tempInput.select();
+                    document.execCommand("copy");
+                    document.body.removeChild(tempInput);
+                    showToast("لینک دانلود با موفقیت کپی شد!", true);
+                }
+            } catch (err) {
+                console.error('خطا در کپی لینک: ', err);
+                showToast("کپی لینک ناموفق بود.", false);
+            }
+        }
+
+        function showToast(message, isSuccess) {
+            const toast = document.getElementById("toast");
+            const toastText = toast.querySelector("span");
+            const toastIcon = toast.querySelector("svg");
+
+            toastText.textContent = message;
+            if(isSuccess) {
+                toastIcon.innerHTML = '<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>';
+                toastIcon.className = "w-5 h-5 text-emerald-400 shrink-0";
+            } else {
+                toastIcon.innerHTML = '<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>';
+                toastIcon.className = "w-5 h-5 text-rose-400 shrink-0";
+            }
+
+            toast.classList.remove("opacity-0", "pointer-events-none", "-translate-y-2");
+            toast.classList.add("opacity-100", "translate-y-0");
+
+            setTimeout(() => {
+                toast.classList.remove("opacity-100", "translate-y-0");
+                toast.classList.add("opacity-0", "pointer-events-none", "-translate-y-2");
+            }, 2500);
+        }
+    </script>
+</body>
+</html>
